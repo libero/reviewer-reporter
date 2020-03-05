@@ -1,0 +1,6 @@
+#!/bin/sh
+
+# This test email is temporary to be replaced with the result of:
+# https://github.com/elifesciences/elife-xpub/blob/develop/scripts/prod-status.sh
+echo "Sending mail $(date)"
+ssmtp xpub-tech-alerts@elifesciences.org < /mail-config/test.msg
