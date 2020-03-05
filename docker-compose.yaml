@@ -10,7 +10,3 @@ services:
       MAILER_AUTH_PASS: ${MAILER_AUTH_PASS}
       MAILER_HOST: ${MAILER_HOST}
       MAILER_PORT: ${MAILER_PORT}
-    volumes:
-      - ./cron_tasks_folder/daily8am:/etc/periodic/daily8am/:ro
-      - ./cron_tasks_folder/daily1pm:/etc/periodic/daily1pm/:ro
-
