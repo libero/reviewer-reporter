@@ -1,0 +1,3 @@
+#!/bin/sh
+echo "Sending mail $(date)"
+ssmtp xpub-tech-alerts@elifesciences.org < /mail-config/test.msg
