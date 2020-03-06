@@ -4,9 +4,12 @@ services:
   reviewer-reporter:
     build:
       context: .
-    image: liberoadmin/reviewer-reporter:latest
+      args:
+        image_tag: ${IMAGE_TAG}
+    image: libero/reviewer-reporter:${IMAGE_TAG}
     environment:
       MAILER_AUTH_USER: ${MAILER_AUTH_USER}
       MAILER_AUTH_PASS: ${MAILER_AUTH_PASS}
       MAILER_HOST: ${MAILER_HOST}
       MAILER_PORT: ${MAILER_PORT}
+
