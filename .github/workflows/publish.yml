@@ -5,7 +5,7 @@ on:
     types: [opened, synchronize, reopened]
   push:
     branches:
-      - master events but only for the master branch
+      - master
 
 env:
   IMAGE_TAG: ${{ github.sha }}
