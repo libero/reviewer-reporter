@@ -4,8 +4,6 @@ services:
   reviewer-reporter:
     build:
       context: .
-      args:
-        image_tag: ${IMAGE_TAG}
     image: libero/reviewer-reporter:${IMAGE_TAG}
     environment:
       MAILER_AUTH_USER: ${MAILER_AUTH_USER}
