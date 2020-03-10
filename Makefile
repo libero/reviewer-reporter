@@ -1,9 +1,7 @@
-IMAGE_NAME=reviewer-reporter
+IMAGE_NAME=libero/reviewer-reporter
+IMAGE_TAG ?= "local"
 
 build:
 	git submodule sync
 	git submodule update --init --recursive
-	docker build -t ${IMAGE_NAME} .
-
-shell:
-	docker run -it --env-file=.env ${IMAGE_NAME} /bin/sh
+	docker build -t ${IMAGE_NAME}:${IMAGE_TAG} .
