@@ -1,6 +1,8 @@
 IMAGE_NAME=reviewer-reporter
 
 build:
+	git submodule sync
+	git submodule update --init --recursive
 	docker build -t ${IMAGE_NAME} .
 
 shell:
