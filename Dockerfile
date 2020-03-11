@@ -1,7 +1,7 @@
 FROM alpine:3.11
 
 RUN apk update \
-  && apk add --no-cache ssmtp gettext libintl \
+  && apk add --no-cache ssmtp gettext libintl postgresql-client\
   && mkdir /mail-config \
   && mkdir /scripts \
   && mkdir /etc/periodic/daily8am \
