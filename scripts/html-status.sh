@@ -21,7 +21,13 @@ IGNORE="( \
   '7a2532cd-ae92-49d0-aa30-d88c0fa1b090', \
   '0fcab2d8-ec36-4f8d-9fbe-53ffab658202', \
   '3df43115-89d2-4a05-ab56-f4deafaa9c7a', \
-  '115843bc-7ce8-4fa3-9511-f1fa42ac08fa' \
+  '115843bc-7ce8-4fa3-9511-f1fa42ac08fa', \
+  'b4c2d3cf-46cd-49e9-b4e2-c623a15df13f', \
+  'e0765d6c-0562-45ac-adc1-cbc6c7456d95', \
+  'b4035b37-8446-464b-a8d6-47324d2ec371', \
+  '0eb33f21-a072-4dd3-827d-877c1ad719fe', \
+  'c1e484ca-28ce-4d63-bd29-d0b55243a135', \
+  '4e51c0ba-ffde-4478-8308-08791cd7ca39' \
 )"
 
 NO_TRUC_COLS="updated, meta->'title' as title, id "
