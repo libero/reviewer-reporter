@@ -27,7 +27,9 @@ IGNORE="( \
   'b4035b37-8446-464b-a8d6-47324d2ec371', \
   '0eb33f21-a072-4dd3-827d-877c1ad719fe', \
   'c1e484ca-28ce-4d63-bd29-d0b55243a135', \
-  '4e51c0ba-ffde-4478-8308-08791cd7ca39' \
+  '4e51c0ba-ffde-4478-8308-08791cd7ca39', \
+  'e9cb825a-d09b-401f-b30c-df14bc9a6feb', \
+  'd8ed08ab-b3b8-4f50-b443-9a5c4ed25495' \
 )"
 
 NO_TRUC_COLS="updated, meta->'title' as title, id "
