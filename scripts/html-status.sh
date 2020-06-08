@@ -29,28 +29,7 @@ IGNORE="( \
   'c1e484ca-28ce-4d63-bd29-d0b55243a135', \
   '4e51c0ba-ffde-4478-8308-08791cd7ca39', \
   'e9cb825a-d09b-401f-b30c-df14bc9a6feb', \
-  'd8ed08ab-b3b8-4f50-b443-9a5c4ed25495', \
-  '9503f387-c9a3-491e-b0d0-36e15a2b384d', \
-  'd3caa46a-b198-4a2b-bab6-28abdbfe303e', \
-  '6917fc24-e3cf-4223-af78-d5aa56faffb0', \
-  '9727fa44-0dde-44ee-82d2-d867a082848d', \
-  '23eb0d6c-5c03-4575-ab00-ad57b004412b', \
-  '98bd5fb5-cdb1-41ce-8537-fed10706dda3', \
-  'c5c5609f-8e2c-42e7-83e0-015832146b24', \
-  'c25c4cb0-4731-429d-9942-c8681cf9bcc7', \
-  'dbd7d31f-b9a0-4d19-83a0-8272d2c0d90a', \
-  '1b37f229-2390-4480-a5bf-df56549c0e43', \
-  'b525d2f4-b6c9-4ffe-b14d-234f0d0b4f04', \
-  '09262d92-58de-4df5-bd06-b5fbfc73bf2f', \
-  'b0f606ea-3d5b-48a9-8cf5-261240df6e96', \
-  'be77e6ff-f877-4dd8-9346-fd7330f2e41d', \
-  '77c4ac29-98a5-40b0-b96a-1ab8db68bbc8', \
-  'a5b70ebb-1daa-47ea-8833-850c4f6931d3', \
-  '1e544e9e-c211-4182-a204-8c2e0c74912a', \
-  'f45ac05d-0682-46fd-83e1-63b869997e53', \
-  'ff75b755-085b-442d-b692-a2009f11ea95', \
-  'c9edaccf-e944-4479-ac0e-fddde796870a', \
-  'ef9b536b-8027-4dfb-a690-79766bfa15ac' \
+  'd8ed08ab-b3b8-4f50-b443-9a5c4ed25495' \
 )"
 
 NO_TRUC_COLS="updated, meta->'title' as title, id "
