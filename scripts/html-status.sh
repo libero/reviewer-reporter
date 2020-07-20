@@ -29,7 +29,7 @@ IGNORE="( \
   'c1e484ca-28ce-4d63-bd29-d0b55243a135', \
   '4e51c0ba-ffde-4478-8308-08791cd7ca39', \
   'e9cb825a-d09b-401f-b30c-df14bc9a6feb', \
-  'd8ed08ab-b3b8-4f50-b443-9a5c4ed25495' \
+  'd8ed08ab-b3b8-4f50-b443-9a5c4ed25495', \
   '8b7f6fda-166d-4610-9199-7e5257f5409b' \
 )"
 
