@@ -5,7 +5,7 @@ on:
     types: [opened, synchronize, reopened]
   push:
     branches:
-      - master
+      - main
 
 env:
   IMAGE_TAG: ${{ github.sha }}
@@ -18,8 +18,8 @@ jobs:
       - name: Build Docker image
         run: make build
       - name: Push image
-        if: github.ref == 'refs/heads/master'
-        run: .scripts/github/push-image.sh reviewer-reporter
+        if: github.ref == 'refs/heads/main'
+        run: .scripts/github/retag-and-push.sh reviewer-reporter $IMAGE_TAG
         env:
           DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
           DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
