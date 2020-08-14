@@ -1,8 +1,6 @@
-name: Publish
+name: Build and Publish
 
 on:
-  pull_request:
-    types: [opened, synchronize, reopened]
   push:
     branches:
       - master
