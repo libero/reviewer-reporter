@@ -16,7 +16,7 @@ jobs:
         with:
           submodules: 'true'
       - name: Build Docker image
-        run: docker build . -t reviewer-reporter:${{ github.sha }}
+        run: docker build . -t libero/reviewer-reporter:${{ github.sha }}
       - name: Push image
         run: .scripts/github/retag-and-push.sh reviewer-reporter ${{ github.sha }}
         env:
