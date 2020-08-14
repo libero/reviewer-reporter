@@ -18,7 +18,6 @@ jobs:
       - name: Build Docker image
         run: docker build . -t reviewer-reporter:${{ github.sha }}
       - name: Push image
-        if: github.ref == 'refs/heads/master' || github.base_ref == 'refs/heads/chart-integration'
         run: .scripts/github/retag-and-push.sh reviewer-reporter ${{ github.sha }}
         env:
           DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
