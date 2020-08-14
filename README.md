@@ -8,7 +8,7 @@ Used as part of the libero-reviewer [chart](https://github.com/libero/reviewer/t
 Two configuration files need to be mounted into the container:
 
 - /etc/ssmtp/ssmtp.conf
-- /mailheader
+- /mail-config/mailheader
 
 Example `mailheader`:
 ```
