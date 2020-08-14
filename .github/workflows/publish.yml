@@ -1,4 +1,4 @@
-name: Publish
+name: Publish Container Image
 
 on:
   pull_request:
@@ -7,19 +7,18 @@ on:
     branches:
       - master
 
-env:
-  IMAGE_TAG: ${{ github.sha }}
-
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+        with:
+          submodules: 'true'
       - name: Build Docker image
-        run: make build
+        run: docker build . -t reviewer-reporter:${{ github.sha }}
       - name: Push image
         if: github.ref == 'refs/heads/master'
-        run: .scripts/github/retag-and-push.sh reviewer-reporter $IMAGE_TAG
+        run: .scripts/github/retag-and-push.sh reviewer-reporter ${{ github.sha }}
         env:
           DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
           DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
