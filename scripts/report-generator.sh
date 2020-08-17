@@ -6,11 +6,10 @@ mailfile=$(mktemp /tmp/mailfile.XXXXXX)
 cp /mail-config/mailheader ${mailfile}
 
 # Generate the report as the body of the file (also take any errors)
-/scripts/html-status.sh 2>>${mailfile} >> ${mailfile}
+/scripts/html-status.sh 2>>${mailfile} >> ${mailfile} || true
 
 # Mail the file
 ssmtp xpub-tech-alerts@elifesciences.org < ${mailfile}
-echo "Mailed ${mailfile}"
 
 # Tidy up
 rm ${mailfile}

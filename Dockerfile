@@ -6,4 +6,4 @@ RUN  apk add --no-cache ssmtp gettext libintl postgresql-client\
 
 ADD scripts /scripts/
 
-CMD "/scripts/main.sh"
+CMD "/scripts/report-generator.sh"
