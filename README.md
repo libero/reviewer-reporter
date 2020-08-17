@@ -27,3 +27,13 @@ mailhub=<MAILER_HOST>:<MAILER_PORT>
 AuthUser=<MAILER_AUTH_USER>
 AuthPass=<MAILER_AUTH_PASS>
 ```
+
+Access to the database requires the following ENVVARS to be set:
+
+```
+PGHOST
+PGUSER
+PGPASSWORD
+PGDATABASE
+PGPORT
+```
