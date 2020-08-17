@@ -1,4 +1,5 @@
 #!/bin/sh
+set -euo pipefail
 
 # Generate a temporary file and populate with header
 mailfile=$(mktemp /tmp/mailfile.XXXXXX)

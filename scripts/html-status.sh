@@ -1,4 +1,5 @@
 #!/bin/sh
+set -euo pipefail
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # This script is based on elife-xpub/scripts/prod-status.sh
