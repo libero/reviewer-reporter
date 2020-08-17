@@ -9,7 +9,7 @@ cp /mail-config/mailheader ${mailfile}
 /scripts/html-status.sh 2>>${mailfile} >> ${mailfile} || true
 
 # Mail the file
-ssmtp xpub-tech-alerts@elifesciences.org < ${mailfile}
+ssmtp ${RECIPIENT} < ${mailfile}
 
 # Tidy up
 rm ${mailfile}

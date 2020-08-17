@@ -37,3 +37,5 @@ PGPASSWORD
 PGDATABASE
 PGPORT
 ```
+
+The recipient of the reports has to be set with: `RECIPIENT`
