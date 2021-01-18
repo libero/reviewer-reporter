@@ -30,7 +30,8 @@ IGNORE="( \
   '4e51c0ba-ffde-4478-8308-08791cd7ca39', \
   'e9cb825a-d09b-401f-b30c-df14bc9a6feb', \
   'd8ed08ab-b3b8-4f50-b443-9a5c4ed25495', \
-  '8b7f6fda-166d-4610-9199-7e5257f5409b' \
+  '8b7f6fda-166d-4610-9199-7e5257f5409b', \
+  '3aee0fc4-9d79-48cd-9374-2190d51f2ee8' \
 )"
 
 NO_TRUC_COLS="updated, meta->'title' as title, id "
