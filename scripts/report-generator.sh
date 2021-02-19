@@ -9,7 +9,7 @@ cp /mail-config/mailheader ${mailfile}
 /scripts/html-status.sh 2>>${mailfile} >> ${mailfile} || true
 
 # Mail the file
-ssmtp ${RECIPIENT} < ${mailfile}
+msmtp ${RECIPIENT} < ${mailfile}
 
 # Tidy up
 rm ${mailfile}

@@ -7,7 +7,7 @@ Used as part of the libero-reviewer [chart](https://github.com/libero/reviewer/t
 
 Two configuration files need to be mounted into the container:
 
-- /etc/ssmtp/ssmtp.conf
+- /etc/msmtprc
 - /mail-config/mailheader
 
 Example `mailheader`:
@@ -18,14 +18,19 @@ MIME-Version: 1.0
 Content-Type: text/html; charset=utf-8
 ```
 
-Example `ssmtp.conf`:
+Example `msmtprc`:
 ```
-UseSTARTTLS=YES
-FromLineOverride=YES
-root=admin@example.com
-mailhub=<MAILER_HOST>:<MAILER_PORT>
-AuthUser=<MAILER_AUTH_USER>
-AuthPass=<MAILER_AUTH_PASS>
+account default
+host <MAILER_HOST>
+port <MAILER_PORT>
+from <FROM ADDRESS>
+tls on
+tls_starttls on
+tls_trust_file /etc/ssl/certs/ca-certificates.crt
+auth on
+user <MAILER_AUTH_USER>
+password <MAILER_AUTH_PASS>
+logfile ~/.msmtp.log
 ```
 
 Access to the database requires the following ENVVARS to be set:
