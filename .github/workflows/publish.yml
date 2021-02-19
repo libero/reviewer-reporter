@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - master
-      - chart-integration
 
 jobs:
   build:
