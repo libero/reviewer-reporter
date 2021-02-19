@@ -1,0 +1,13 @@
+name: Only Build Image
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build Docker image
+        run: docker build . -t libero/reviewer-reporter:${{ github.sha }}

@@ -1,8 +1,0 @@
-#!/bin/sh
-UseSTARTTLS=YES
-FromLineOverride=YES
-root=admin@example.com
-mailhub=${MAILER_HOST}:${MAILER_PORT}
-AuthUser=${MAILER_AUTH_USER}
-AuthPass=${MAILER_AUTH_PASS}
-

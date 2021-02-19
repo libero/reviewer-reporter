@@ -1,15 +1,9 @@
-FROM alpine:3.11
+FROM alpine:3@sha256:a15790640a6690aa1730c38cf0a440e2aa44aaca9b0e8931a9f2b0d7cc90fd65
 
-RUN apk update \
-  && apk add --no-cache ssmtp gettext libintl postgresql-client\
+RUN  apk add --no-cache msmtp gettext libintl postgresql-client\
   && mkdir /mail-config \
-  && mkdir /scripts \
-  && mkdir /etc/periodic/daily8am \
-  && mkdir /etc/periodic/daily1pm
+  && mkdir /scripts
 
-ADD mail-config /mail-config/
 ADD scripts /scripts/
-ADD cron_tasks_folder/daily8am/send-mail /etc/periodic/daily8am
-ADD cron_tasks_folder/daily1pm/send-mail /etc/periodic/daily1pm
 
-CMD [ "/bin/sh", "/scripts/startup.sh" ]
+CMD "/scripts/report-generator.sh"
