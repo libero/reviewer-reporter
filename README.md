@@ -32,7 +32,7 @@ Then, open the file in your prefered editor and at minimum set valid values for 
 You should then be able to launch the container using the below, setting a valid value for the `RECIPIENT` environment varible.
 
 ```
-docker run -it --rm -e RECIPIENT='me@example.com' -v $PWD/mailheader:/mail-config/mailheader:ro -v $PWD/msmtprc:/etc/msmtprc:ro liberoadmin/reviewer-reporter
+RECIPIENT='me@example.com' make
 ```
 
 All being well, the target inbox should recieve an empty report.
