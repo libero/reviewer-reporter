@@ -1,0 +1,11 @@
+account default
+host smtp.example.com
+port 587
+from no-reply@example.com
+tls on
+tls_starttls on
+tls_trust_file /etc/ssl/certs/ca-certificates.crt
+auth on
+user user@example.com
+password mymailboxpassword
+logfile ~/.msmtp.log
