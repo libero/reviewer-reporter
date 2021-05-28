@@ -45,6 +45,7 @@ SQL_STATUS="SELECT status, count(*) as num FROM manuscript WHERE id NOT IN ${IGN
 SQL_PENDING="SELECT ${COLS} FROM manuscript WHERE id NOT IN ${IGNORE} AND status='MECA_EXPORT_PENDING' ORDER BY updated"
 SQL_SUCCEEDED="SELECT ${COLS} FROM manuscript WHERE id NOT IN ${IGNORE} AND status='MECA_EXPORT_SUCCEEDED' ORDER BY updated"
 SQL_FAILED="SELECT ${COLS} FROM manuscript WHERE id NOT IN ${IGNORE} AND status='MECA_IMPORT_FAILED' ORDER BY updated"
+SQL_EXPORT_FAILED="SELECT ${COLS} FROM manuscript WHERE id NOT IN ${IGNORE} AND status='MECA_EXPORT_FAILED' ORDER BY updated"
 SQL_SURVEY="select m.count as complete, t.count as total, concat(100 * m.count / t.count, '%') as response_rate from (select count(*) from survey_response where JSONB(response->'answers'->>0)->'answer' <> '\"\"' ) as m, (select count(*) from survey_response) as t ; "
 
 echo
@@ -71,6 +72,11 @@ echo
 echo "<h2>Submissions Failed</h2>"
 echo
 echo "<pre>" ; ${CMD} "${SQL_FAILED}"; echo "</pre>"
+
+echo
+echo "<h2>Export Failed</h2>"
+echo
+echo "<pre>" ; ${CMD} "${SQL_EXPORT_FAILED}"; echo "</pre>"
 
 echo "<hr>Generated from $(hostname)"
 
